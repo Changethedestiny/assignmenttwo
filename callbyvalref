@@ -1,0 +1,32 @@
+int main()  
+{  
+    int a = 10;  
+    int b = 20; 
+    printf(" Swap by reference:-\n");
+    printf("Before swapping the values in main a = %d, b = %d\n",a,b);   
+    swap_reference(&a,&b);  
+    printf("After swapping values in main a = %d, b = %d\n",a,b); 
+    printf(" swap by value:-\n");
+    a = 10;  
+    b = 20;   
+    printf("swap by reference");
+    printf("Before swapping the values in main a = %d, b = %d\n",a,b); 
+    swap_value(a,b);  
+    printf("After swapping values in main a = %d, b = %d\n",a,b); 
+}  
+void swap_reference (int *a, int *b)  
+{  
+    int temp;   
+    temp = *a;  
+    *a=*b;  
+    *b=temp;  
+    printf("After swapping values in function a = %d, b = %d\n",*a,*b); 
+}  
+void swap_value (int a, int b)  
+{  
+    int temp;   
+    temp = a;  
+    a=b;  
+    b=temp;  
+    printf("After swapping values in function a = %d, b = %d\n",a,b); 
+}
